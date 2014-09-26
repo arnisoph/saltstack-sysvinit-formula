@@ -1,3 +1,18 @@
 {% load_yaml as rawmap %}
-Debian: {}
+Debian:
+  config:
+    manage:
+      - inittab
+    inittab: {}
+    rclocal:
+      path: /etc/rc.local
+RedHat:
+  pkgs:
+    - grub
+  config:
+    manage:
+      - inittab
+    inittab: {}
+    rclocal:
+      path: /etc/rc.d/rc.local
 {% endload %}
